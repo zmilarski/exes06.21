@@ -11,6 +11,13 @@ public class Main {
         System.out.println(data2.getCurrentMonthDaysCount());
         System.out.println(data3.getCurrentMonthDaysCount());
         System.out.println(data3.isValid());
+        Date data4 = new Date(17,12, 2020);
+        System.out.println(data4);
+        System.out.println("----------------");
+        Date data5 = new Date(21,06, 2019);
+        System.out.println(data5);
+        data5.addDays(365);
+        System.out.println(data5);
 
     }
 }

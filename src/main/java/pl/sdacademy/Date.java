@@ -26,4 +26,12 @@ public class Date {
     public String toString(){
         return day + "." + month + "." + year;
     }
+
+    public boolean isLeapYear(){
+        boolean leap = false;
+        if (year % 4 == 0){
+            leap = true;
+        }
+        return leap;
+    }
 }

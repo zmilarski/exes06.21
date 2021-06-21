@@ -44,4 +44,9 @@ public class Date {
             return 30;
         }
     }
+
+    public boolean isValid(){
+        return day <= getCurrentMonthDaysCount();
+    }
+
 }

@@ -28,10 +28,6 @@ public class Date {
     }
 
     public boolean isLeapYear(){
-        boolean leap = false;
-        if (year % 4 == 0){
-            leap = true;
-        }
-        return leap;
+        return year % 4 == 0;
     }
 }

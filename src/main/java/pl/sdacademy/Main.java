@@ -14,9 +14,9 @@ public class Main {
         Date data4 = new Date(17,12, 2020);
         System.out.println(data4);
         System.out.println("----------------");
-        Date data5 = new Date(21,06, 2019);
+        Date data5 = new Date(21,06, 2021);
         System.out.println(data5);
-        data5.addDays(365);
+        data5.addDays(-730);
         System.out.println(data5);
 
     }

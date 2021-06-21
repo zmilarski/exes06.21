@@ -50,19 +50,37 @@ public class Date {
     }
 
     public void addDays(int x) {
-        while (x != 0) {
-            if (day + x > getCurrentMonthDaysCount()) {
-                x = x - (getCurrentMonthDaysCount() - day + 1);
-                day = 1;
-                if (month != 12) {
-                    month += 1;
+        if (x > 0) {
+            while (x != 0) {
+                if (day + x > getCurrentMonthDaysCount()) {
+                    x = x - (getCurrentMonthDaysCount() - day + 1);
+                    day = 1;
+                    if (month != 12) {
+                        month += 1;
+                    } else {
+                        month = 1;
+                        year += 1;
+                    }
                 } else {
-                    month = 1;
-                    year+=1;
+                    day += x;
+                    x = 0;
                 }
-            } else {
-                day += x;
-                x = 0;
+            }
+        }else{
+            while (x != 0) {
+                if (day + x <= 0) {
+                    x = x + (day);
+                    if (month != 1) {
+                        month -= 1;
+                    } else {
+                        month = 12;
+                        year -= 1;
+                    }
+                    day = getCurrentMonthDaysCount();
+                } else {
+                    day += x;
+                    x = 0;
+                }
             }
         }
     }
